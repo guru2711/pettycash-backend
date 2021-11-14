@@ -54,12 +54,12 @@ app.post("/login",async (req,res) => {
      console.log(pass)
      !pass && res.status(400).json("Invalid credentials")
  console.log(user)
- const accessToken = createTokens(user)
+//  const accessToken = createTokens(user)
 
- res.cookie("access-token",accessToken,{
-     maxAge: 60 * 60 * 24 * 30 * 1000,
-     httpOnly: true
- })
+//  res.cookie("access-token",accessToken,{
+//      maxAge: 60 * 60 * 24 * 30 * 1000,
+//      httpOnly: true
+//  })
      return res.status(200).json(user)
    
     }catch(err){
