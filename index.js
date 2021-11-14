@@ -15,9 +15,9 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors());
 
-var url = process.env.MONGOLAB_URI;
 
-mongoose.connect(url,() => {
+
+mongoose.connect(process.env.MONGO_URI,() => {
     console.log("connected to db")
 })
 
