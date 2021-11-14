@@ -14,8 +14,10 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors());
-  
-mongoose.connect("mongodb+srv://Guru:Guru777@cluster0.ke7v2.mongodb.net/pettycash?retryWrites=true&w=majority",() => {
+
+var url = process.env.MONGOLAB_URI;
+
+mongoose.connect(url,() => {
     console.log("connected to db")
 })
 
